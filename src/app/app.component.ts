@@ -7,8 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   comments = [
-      'first comment!',
-      'nice work!',
-      'I would also like to congratulate you!'
+      {
+      	"comment", "first comment!";
+      	"author", "Quinn";
+      },
+      {
+      	"comment": 'nice work!',
+      	"author": "Q"
+      },
+      {
+      	"comment":'I would also like to congratulate you!',
+      	"author": "everyone"
+      
   ];
 }
