@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommentService } from './commentService/comment.service'
 
 @Component({
   selector: 'app-root',
@@ -6,18 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  comments = [
-      {
-      	"comment", "first comment!";
-      	"author", "Quinn";
-      },
-      {
-      	"comment": 'nice work!',
-      	"author": "Q"
-      },
-      {
-      	"comment":'I would also like to congratulate you!',
-      	"author": "everyone"
-      
-  ];
+
+  constructor(private commentService: CommentService) { }
+
+  ngOnInit() {
+
+  }
+
 }

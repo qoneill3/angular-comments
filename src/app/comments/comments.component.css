@@ -1,0 +1,12 @@
+li {
+	list-style: none;
+}
+
+div {
+	padding-left: 24px;
+	margin-right: 36px;
+}
+
+span {
+	font-weight: 600;
+}

@@ -1,0 +1,19 @@
+<h1>Comments</h1>
+<ul>
+    <li *ngFor="let comment of comments">
+    	<div *ngIf="comment.editable === false" class="jumbotron">
+	    	<p><span>AUTHOR:	</span>{{comment.author}}</p>
+	    	<p><span>COMMENT:	</span>{{comment.comment}}</p>
+	    	<button (click)="deleteComment(comment)" class="btn btn-danger">Delete</button>
+	    	<button (click)="editComment(comment)" class="btn btn-primary">Edit</button>
+	    </div>
+	    <div *ngIf="comment.editable === true" class="jumbotron">
+	    	<div class="alert alert-warning">EDITING COMMENT</div>
+    		<p><span>AUTHOR:	</span><input [(ngModel)]="editedAuthor" placeholder="Edit Author" value="author"></p>
+    		<p><span>COMMENT:	</span><input [(ngModel)]="editedComment" placeholder="Edit Comment"></p>
+    		<button (click)="deleteComment(comment)" class="btn btn-danger">Delete</button>
+    		<button (click)="editComment(comment)" class="btn btn-primary">Edit</button>
+    		<button (click)="setComment(comment,editedAuthor,editedComment)" class="btn btn-warning">Save Changes</button>
+	    </div>
+    </li>
+</ul>
